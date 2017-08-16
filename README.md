@@ -1,8 +1,8 @@
 # Fixed File Format converter
 
-The goal of this project is to write a generic tool to convert fixed file format files to csv files based on a metadata file.
+Your goal is to write a generic tool to convert fixed file format files to a csv file based on a metadata file describing its structure.
 
-Feel free to use your favorite language and libraries if needed (but no proprietary libraries, only open source), fork this project and provide your complete code including source and tests as a pull request.
+Feel free to use your favorite language and libraries if needed (but no proprietary libraries, only open source), fork this project and provide your complete code as a pull request (including source and tests).
 
 ## Use case
 
@@ -17,7 +17,9 @@ The structure of the file is described in a metadata file in csv format with a l
 * column length
 * column type
 
-You should transform the file to a csv file (separator ',' row separator CRLF) and format the dates to dd/mm/yyyy
+You should transform the file to a csv file (separator ',' row separator CRLF)
+The dates have to be reformatted to dd/mm/yyyy
+The csv file must include a first line with the columns names
 
 ## Example
 
@@ -46,7 +48,7 @@ Birth date,First name,Last name,Weight
 
 ## Extra requirements
 * files are encoded in UTF-8 and may contain special characters
-* strings columns may contain characters to be escaped like ',' CR LF
-* in case the format of the file is not correct, the program should fail but state explicitly why
+* strings columns may contain characters and then need to be escaped with " (double quotes) like ',' but. Only CR or LF are forbidden
+* in case the format of the file is not correct, the program should fail but say explicitly why
 * a fixed format file may be very big (several GB)
 
