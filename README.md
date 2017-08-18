@@ -9,7 +9,7 @@ Feel free to use your favorite language and libraries if needed (but no propriet
 Our fixed file format files can have any number of columns
 A column can be of 3 formats:
 * date (format yyyy-mm-dd)
-* numeric (decimal separator '.' no thousands separator can be negative)
+* numeric (decimal separator '.' ; no thousands separator ; can be negative)
 * string
 
 The structure of the file is described in a metadata file in csv format with a line for each column defining:
@@ -17,8 +17,12 @@ The structure of the file is described in a metadata file in csv format with a l
 * column length
 * column type
 
-You should transform the file to a csv file (separator ',' row separator CRLF)
+You should transform the file to a csv file (separator ',' and row separator CRLF)
+
 The dates have to be reformatted to dd/mm/yyyy
+
+The trailing spaces of string columns must be trimmed
+
 The csv file must include a first line with the columns names
 
 ## Example
@@ -48,7 +52,7 @@ Birth date,First name,Last name,Weight
 
 ## Extra requirements
 * files are encoded in UTF-8 and may contain special characters
-* strings columns may contain characters and then need to be escaped with " (double quotes) like ',' but. Only CR or LF are forbidden
+* strings columns may contain separator characters like ',' and then the whole string needs to be escaped with " (double quotes). Only CR or LF are forbidden
 * in case the format of the file is not correct, the program should fail but say explicitly why
 * a fixed format file may be very big (several GB)
 
