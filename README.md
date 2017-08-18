@@ -18,8 +18,11 @@ The structure of the file is described in a metadata file in csv format with a l
 * column type
 
 You should transform the file to a csv file (separator ',' and row separator CRLF)
+
 The dates have to be reformatted to dd/mm/yyyy
+
 The trailing spaces of string columns must be trimmed
+
 The csv file must include a first line with the columns names
 
 ## Example
