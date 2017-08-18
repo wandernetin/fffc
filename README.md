@@ -49,7 +49,7 @@ Birth date,First name,Last name,Weight
 
 ## Extra requirements
 * files are encoded in UTF-8 and may contain special characters
-* strings columns may contain separator characters like 's' and then the whole string needs to be escaped with " (double quotes). Only CR or LF are forbidden
+* strings columns may contain separator characters like ',' and then the whole string needs to be escaped with " (double quotes). Only CR or LF are forbidden
 * in case the format of the file is not correct, the program should fail but say explicitly why
 * a fixed format file may be very big (several GB)
 
