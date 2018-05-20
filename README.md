@@ -1,3 +1,10 @@
+How to run:
+- Make sure that you are running file: FixedFileFormatConverter
+- Input files (metadata.csv and input.dat) must be in data folder
+- Output file will be in data folder as well named as output.csv
+
+
+
 # Fixed File Format converter
 
 Your goal is to write a generic tool to convert fixed file format files to a csv file based on a metadata file describing its structure.
